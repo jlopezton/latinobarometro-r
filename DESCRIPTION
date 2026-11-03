@@ -1,0 +1,33 @@
+Package: latinobarometro
+Type: Package
+Title: Download and Harmonize Latinobarometro Survey Waves
+Version: 0.1.0
+Authors@R: person("Jorge", "Soler-Lopez",
+                  email = "jorge.solerlopez@unibocconi.it",
+                  role = c("aut", "cre"))
+Description: Downloads waves of the Latinobarometro public opinion survey
+    (1995-2024) directly from the Latinobarometro Corporation website, caches
+    them locally, and optionally harmonizes variable names across waves using
+    the official time-series crosswalk. Also constructs country-population
+    scaled survey weights for pooled regional analysis by merging World Bank
+    population totals. No survey data are redistributed by this package:
+    files are retrieved by the user at run time from
+    <https://www.latinobarometro.org>, and users remain bound by the
+    Latinobarometro terms of use.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.6.0)
+Imports:
+    haven (>= 2.3.0),
+    readxl,
+    stats,
+    tools,
+    utils
+Suggests:
+    WDI,
+    curl,
+    testthat (>= 3.2.0)
+URL: https://github.com/jlopezton/latinobarometro-r
+BugReports: https://github.com/jlopezton/latinobarometro-r/issues
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
